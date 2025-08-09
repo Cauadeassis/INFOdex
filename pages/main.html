@@ -1,39 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INFOdex</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INFOdex</title>
+  <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
-    <header>
-        <div id="mainTitleContainer">
-            <h1 id="mainTitle">INFOdex</h1>
-        </div>
-        <form method="get" action="/search">
-            <div id="searchContainer">
-                <input id="searchInput" type="search" placeholder="Pesquise por alguém">
-                <span id="clearButton" class="disabled">&times;</span>
-                <button id="searchButton" type="submit"><img id="searchIcon" src="searchIcon.png" alt=""></button>
-            </div>
-            <div id="filterContainer">
-                <label for="filter">Ordenar por:</label>
-                <select id="filterSelect">
-                    <option value="alphabetic">A-Z</option>
-                    <option value="alphabeticReverse">Z-A</option>
-                    <option value="height">Altura</option>
-                    <option value="date">Data</option>
-                </select>
-            </div>
-        </form>
-    </header>
-    <main>
-
-    </main>
-    <script src="main.js"></script>
+  <header>
+    <div id="mainTitleContainer">
+      <h1 id="mainTitle">INFOdex</h1>
+    </div>
+    <form method="get" action="/search">
+      <div id="searchContainer">
+        <input id="searchInput" type="search" placeholder="Pesquise por alguém" />
+        <span id="clearButton" class="disabled">&times;</span>
+        <button id="searchButton" type="submit">
+          <img id="searchIcon" src="searchIcon.png" alt="" />
+        </button>
+      </div>
+      <div id="filterContainer">
+        <label for="filter">Ordenar por:</label>
+        <select id="filterSelect">
+          <option value="alphabetic">A-Z</option>
+          <option value="alphabeticReverse">Z-A</option>
+          <option value="height">Altura</option>
+          <option value="date">Data</option>
+        </select>
+      </div>
+    </form>
+  </header>
+  <main></main>
+  <script src="main.js"></script>
 </body>
 
 </html>
