@@ -1,0 +1,202 @@
+:root {
+  --purple: hsl(300, 100%, 25%);
+  --purple-hover: hsl(300, 100%, 23%);
+  --purple-border: hsl(300, 100%, 30%);
+  --purple-light: hsl(300, 100%, 70%);
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background: var(--black);
+  color: var(--purple);
+  padding: 40px 20px 15px;
+}
+
+#mainTitleContainer {
+  text-align: center;
+}
+
+#mainTitle {
+  display: inline-block;
+  font-size: 60px;
+  text-shadow:
+    0 0 2px var(--purple),
+    0 0 4px hsl(300, 90%, 25%);
+  cursor: pointer;
+}
+
+#mainTitle:hover {
+  transform: scale(1.05);
+  text-shadow:
+    0 0 4px var(--purple),
+    0 0 8px hsl(300, 80%, 25%);
+}
+
+form {
+  display: inline-flex;
+  gap: 500px;
+}
+
+#searchContainer {
+  display: inline-block;
+}
+
+#searchInput {
+  background: var(--purple);
+  width: 400px;
+  font-size: 20px;
+  padding: 17px;
+  border: 1px solid var(--purple-border);
+  border-radius: 10px;
+}
+
+#searchInput:hover,
+#searchInput:focus {
+  background: var(--purple-hover);
+  border-color: hsl(300, 100%, 75%);
+  box-shadow: 0 0 2px var(--purple-light);
+  outline: none;
+}
+
+#searchInput::-webkit-search-cancel-button {
+  display: none;
+}
+
+#searchInput::placeholder {
+  color: black;
+  transition: 0.3s;
+}
+
+#searchInput:hover::placeholder,
+#searchInput:focus::placeholder {
+  transform: scale(1.1);
+  padding-left: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#searchInput:focus::placeholder {
+  color: transparent;
+}
+
+#clearButton {
+  color: black;
+  text-shadow: 0 0 5px black;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 45px;
+}
+
+#clearButton:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.disabled {
+  display: none;
+}
+
+#searchButton {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--purple-border);
+  border-radius: 5px;
+  background: var(--purple);
+  cursor: pointer;
+}
+
+#searchButton:hover,
+#searchButton:focus {
+  background: var(--purple-hover);
+}
+
+#searchButton:hover #searchIcon {
+  transform: scale(1.2);
+}
+
+#searchIcon {
+  width: 35px;
+}
+
+#filterContainer {
+  display: flex;
+  width: 350px;
+  padding: 15px;
+  font-size: 25px;
+  background: var(--purple);
+  color: black;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+#filterSelect {
+  outline: none;
+  font-size: 20px;
+  text-align: center;
+  width: 50%;
+  border: none;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+option {
+  background: var(--purple);
+  color: black;
+  border: none;
+  text-shadow: 0 0 2px hsl(300, 100%, 75%);
+}
+
+main {
+  background: var(--black);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.classmateDiv {
+  width: 250px;
+  height: 300px;
+  border-radius: 25px;
+  padding: 25px;
+}
+
+.classmateDiv:hover {
+  cursor: pointer;
+}
+
+.classmateDiv:hover .classmatePhoto,
+.classmateDiv:hover .classmateName {
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+.classmatePhoto {
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+}
+
+.classmateName {
+  padding: 10px;
+  max-width: 200px;
+  text-align: center;
+  color: var(--purple);
+  text-shadow: 0 0 4px var(--purple);
+  font-size: 40px;
+}
