@@ -1,5 +1,12 @@
-import Head from "next/head"
+import Head from "next/head";
+import { infoClassmates } from "/lib/classmates";
+
 export default function Home() {
+  function handleClick(classmate) {
+    localStorage.setItem("classmate", JSON.stringify(classmate));
+    window.location.href = "/secondaryPage";
+  }
+
   return (
     <>
       <Head>
@@ -15,8 +22,14 @@ export default function Home() {
         </div>
         <form method="get" action="/search">
           <div id="searchContainer">
-            <input id="searchInput" type="search" placeholder="Pesquise por alguém" />
-            <span id="clearButton" className="disabled">&times;</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Pesquise por alguém"
+            />
+            <span id="clearButton" className="disabled">
+              &times;
+            </span>
             <button id="searchButton" type="submit">
               <img id="searchIcon" src="searchIcon.png" alt="" />
             </button>
@@ -33,7 +46,24 @@ export default function Home() {
         </form>
       </header>
 
-      <main></main>
+      <main>
+        {infoClassmates.map((classmate) => (
+          <div
+            key={classmate.name}
+            className="classmateDiv"
+            onClick={() => handleClick(classmate)}
+          >
+            <img
+              className="classmatePhoto"
+              src={classmate.photo}
+              alt={`Foto de ${classmate.name}`}
+            />
+            <p className="classmateName">
+              {classmate.name.split(" ")[0]}
+            </p>
+          </div>
+        ))}
+      </main>
     </>
-  )
+  );
 }
