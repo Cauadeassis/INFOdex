@@ -1,6 +1,6 @@
 import Head from "next/head";
-import { infoClassmates } from "/lib/classmates";
-import styles from "@/styles/main.module.css";
+import { infoClassmates } from "lib/classmates";
+import styles from "styles/main.module.css";
 export default function Home() {
   function handleClick(classmate) {
     localStorage.setItem("classmate", JSON.stringify(classmate));
