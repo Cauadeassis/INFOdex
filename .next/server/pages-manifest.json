@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/secondaryPage": "pages/secondaryPage.js",
   "/api/v1/status": "pages/api/v1/status.js"
 }
