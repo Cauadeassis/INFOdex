@@ -6,13 +6,10 @@ export default function SecondaryPage() {
   const [classmate, setClassmate] = useState(null);
 
   useEffect(() => {
-    // pega o classmate do localStorage
     const stored = localStorage.getItem("classmate");
     if (stored) {
       const parsed = JSON.parse(stored);
       setClassmate(parsed);
-
-      // muda o título da aba
       document.title = parsed.name.split(" ")[0];
     }
   }, []);
