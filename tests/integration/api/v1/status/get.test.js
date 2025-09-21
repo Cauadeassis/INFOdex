@@ -1,3 +1,9 @@
+import database from "infra/database.js"
+beforeAll(cleanDatabase)
+async function cleanDatabase() {
+  await database("drop schema public cascade; create schema public;")
+}
+
 test("GET TO /api/v1/status should return 200", async () => {
   const response = await fetch("http://localhost:3000/api/v1/status");
   expect(response.status).toBe(200);
